@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::group(['middle' => ['web', 'auth']], function () {
+    Route::get('/users', 'UserController@index')->name('users');
 });
+

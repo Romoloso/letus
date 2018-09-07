@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\ConvertMappingCommand::class,
+        Commands\GenerateEntitiesCommand::class,
+        Commands\UpdateCommand::class
     ];
 
     /**
