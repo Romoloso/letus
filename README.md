@@ -12,3 +12,21 @@
 - Login and login attempts.
 - Login Testing
 
+## 命令行工具
+
+ ```
+ php artisan list
+ ```
+
+### Doctrine
+
+```
+# 数据表转 yml 映射文件(已支持字段注释直接转化为yml文件)
+vendor\bin\doctrine orm:convert-mapping --from-database yml app/ThirdParty/Doctrine/Mappings
+# 生成 Entity 文件
+vendor\bin\doctrine orm:generate-entities app/ThirdParty/Doctrine/Entity
+# 查看 更新SQL
+vendor\bin\doctrine orm:schema-tool:update --dump-sql
+# 执行更新
+vendor\bin\doctrine orm:schema-tool:update --force
+```
