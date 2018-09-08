@@ -11,7 +11,10 @@
 |
 */
 
+use Entity\Migrations;
+
 Route::get('/', function () {
+    $mi = new Entity\Migrations();
 
     return view('welcome');
 });

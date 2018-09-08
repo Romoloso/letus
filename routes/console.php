@@ -16,3 +16,15 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+/*Artisan::command('doctrine:orm:convert-mapping', function () {
+    $doctrine = new \App\Services\Doctrine();
+
+    return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($doctrine->em);
+});
+Artisan::command('doctrine:orm:generate-entities', function () {
+    $doctrine = new \App\Services\Doctrine();
+
+    return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($doctrine->em);
+});*/
+

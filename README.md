@@ -10,7 +10,8 @@
 ## Functions
 - Laravel 5.4 passport
 - Login and login attempts.
-- Login Testing
+- Login Testing.
+- Doctrine mapping and entities.
 
 ## 命令行工具
 
@@ -22,9 +23,9 @@
 
 ```
 # 数据表转 yml 映射文件(已支持字段注释直接转化为yml文件)
-vendor\bin\doctrine orm:convert-mapping --from-database yml app/ThirdParty/Doctrine/Mappings
+vendor\bin\doctrine orm:convert-mapping --from-database yml Doctrine/Mappings --force
 # 生成 Entity 文件
-vendor\bin\doctrine orm:generate-entities app/ThirdParty/Doctrine/Entity
+vendor\bin\doctrine orm:generate-entities Doctrine
 # 查看 更新SQL
 vendor\bin\doctrine orm:schema-tool:update --dump-sql
 # 执行更新

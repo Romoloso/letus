@@ -1,8 +1,6 @@
 <?php
 namespace App\Services;
 
-use Illuminate\Support\Facades\Config;
-
 /**
  * Class Doctrine
  *
@@ -23,22 +21,24 @@ class Doctrine
      */
     public function __construct()
     {
-        define('APP_PATH', rtrim(dirname(__DIR__), '/') . DIRECTORY_SEPARATOR);
+        if (! defined('THIRD_PATH')) {
+            define('THIRD_PATH', rtrim(dirname(dirname(__DIR__)), '/') . DIRECTORY_SEPARATOR);
+        }
 
         // 加载Doctrine的一些类
-        $doctrineClassLoader = new \Doctrine\Common\ClassLoader('Doctrine',  APP_PATH . 'ThirdParty/Doctrine/');
+        $doctrineClassLoader = new \Doctrine\Common\ClassLoader('Doctrine',  THIRD_PATH . 'Doctrine');
         $doctrineClassLoader->register();
 
         // 加载Symfony2的帮助类
-        $symfonyClassLoader = new \Doctrine\Common\ClassLoader('Symfony', APP_PATH . 'ThirdParty/Doctrine');
+        $symfonyClassLoader = new \Doctrine\Common\ClassLoader('Symfony', THIRD_PATH . 'Doctrine');
         $symfonyClassLoader->register();
 
         // 加载实体
-        $entityClassLoader = new \Doctrine\Common\ClassLoader('Entity', APP_PATH . 'ThirdParty/Doctrine/Entity');
+        $entityClassLoader = new \Doctrine\Common\ClassLoader('Entity', THIRD_PATH . 'Doctrine/Entity');
         $entityClassLoader->register();
 
         // 加载代理实体
-        $proxyClassLoader = new \Doctrine\Common\ClassLoader('Proxies', APP_PATH . 'ThirdParty/Doctrine/Entity');
+        $proxyClassLoader = new \Doctrine\Common\ClassLoader('Proxies', THIRD_PATH . 'Doctrine/Entity');
         $proxyClassLoader->register();
 
         // 设置一些配置
@@ -48,15 +48,18 @@ class Doctrine
         $config->setQueryCacheImpl($cache);
 
         // 设置代理配置
-        $config->setProxyDir(APP_PATH . 'ThirdParty/Doctrine/Proxies');
+        $config->setProxyDir(THIRD_PATH . 'Doctrine/Proxies');
         $config->setProxyNamespace('Proxies');
 
         // 在开发模式下，自动生成代理类
         $config->setAutoGenerateProxyClasses(true);
 
         // 设置注解驱动
-        $yamlDriver = new \Doctrine\ORM\Mapping\Driver\YamlDriver(APP_PATH . 'ThirdParty/Doctrine/Mappings');
+        $yamlDriver = new \Doctrine\ORM\Mapping\Driver\YamlDriver(THIRD_PATH . 'Doctrine/Mappings');
         $config->setMetadataDriverImpl($yamlDriver);
+
+        $logger = new \Doctrine\DBAL\Logging\EchoSQLLogger;
+        $config->setSQLLogger($logger);
 
         // 读取数据库配置
         // $db  = config('database.default');
@@ -83,6 +86,11 @@ class Doctrine
         $em = \Doctrine\ORM\EntityManager::create($connectionOptions, $config);
         // 将实体管理器保存为一个成员，在控制器中使用
         $this->em = $em;
+
+        // 设置 Entity 的命名空间(这里很重要，不然找不到文件）
+        $driver = new \Doctrine\ORM\Mapping\Driver\DatabaseDriver($em->getConnection()->getSchemaManager());
+        $driver->setNamespace('Entity\\');
+        $em->getConfiguration()->setMetadataDriverImpl($driver);
 
     }
 
