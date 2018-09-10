@@ -22,8 +22,8 @@
 ### Doctrine
 
 ```
-# ~~数据表转 yml 映射文件(已支持字段注释直接转化为yml文件)~~
-vendor\bin\doctrine orm:convert-mapping --from-database yml Doctrine/Mappings --force
+# 数据表转 yml 映射文件(已支持字段注释直接转化为yml文件)
+~~vendor\bin\doctrine orm:convert-mapping --from-database yml Doctrine/Mappings --force.~~
 # 生成 Entity 文件
 vendor\bin\doctrine orm:generate-entities Doctrine
 # 查看 更新SQL
