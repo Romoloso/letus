@@ -8,30 +8,30 @@ namespace Entity;
 class OauthPersonalAccessClients
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
 
     /**
-     * @var integer
+     * @var int
      */
     private $clientId;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $updatedAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -39,9 +39,9 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Set clientId
+     * Set clientId.
      *
-     * @param integer $clientId
+     * @param int $clientId
      *
      * @return OauthPersonalAccessClients
      */
@@ -53,9 +53,9 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Get clientId
+     * Get clientId.
      *
-     * @return integer
+     * @return int
      */
     public function getClientId()
     {
@@ -63,13 +63,13 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
-     * @param \DateTime $createdAt
+     * @param \DateTime|null $createdAt
      *
      * @return OauthPersonalAccessClients
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = null)
     {
         $this->createdAt = $createdAt;
 
@@ -77,9 +77,9 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -87,13 +87,13 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
-     * @param \DateTime $updatedAt
+     * @param \DateTime|null $updatedAt
      *
      * @return OauthPersonalAccessClients
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
 
@@ -101,9 +101,9 @@ class OauthPersonalAccessClients
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {

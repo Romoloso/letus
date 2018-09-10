@@ -18,18 +18,18 @@ class OauthRefreshTokens
     private $accessTokenId;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $revoked;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $expiresAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
      * @return string
      */
@@ -39,7 +39,7 @@ class OauthRefreshTokens
     }
 
     /**
-     * Set accessTokenId
+     * Set accessTokenId.
      *
      * @param string $accessTokenId
      *
@@ -53,7 +53,7 @@ class OauthRefreshTokens
     }
 
     /**
-     * Get accessTokenId
+     * Get accessTokenId.
      *
      * @return string
      */
@@ -63,9 +63,9 @@ class OauthRefreshTokens
     }
 
     /**
-     * Set revoked
+     * Set revoked.
      *
-     * @param boolean $revoked
+     * @param bool $revoked
      *
      * @return OauthRefreshTokens
      */
@@ -77,9 +77,9 @@ class OauthRefreshTokens
     }
 
     /**
-     * Get revoked
+     * Get revoked.
      *
-     * @return boolean
+     * @return bool
      */
     public function getRevoked()
     {
@@ -87,13 +87,13 @@ class OauthRefreshTokens
     }
 
     /**
-     * Set expiresAt
+     * Set expiresAt.
      *
-     * @param \DateTime $expiresAt
+     * @param \DateTime|null $expiresAt
      *
      * @return OauthRefreshTokens
      */
-    public function setExpiresAt($expiresAt)
+    public function setExpiresAt($expiresAt = null)
     {
         $this->expiresAt = $expiresAt;
 
@@ -101,9 +101,9 @@ class OauthRefreshTokens
     }
 
     /**
-     * Get expiresAt
+     * Get expiresAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getExpiresAt()
     {

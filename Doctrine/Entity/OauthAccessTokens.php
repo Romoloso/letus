@@ -13,48 +13,48 @@ class OauthAccessTokens
     private $id;
 
     /**
-     * @var integer
+     * @var int|null
      */
     private $userId;
 
     /**
-     * @var integer
+     * @var int
      */
     private $clientId;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $name;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $scopes;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $revoked;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $updatedAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $expiresAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
      * @return string
      */
@@ -64,13 +64,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set userId
+     * Set userId.
      *
-     * @param integer $userId
+     * @param int|null $userId
      *
      * @return OauthAccessTokens
      */
-    public function setUserId($userId)
+    public function setUserId($userId = null)
     {
         $this->userId = $userId;
 
@@ -78,9 +78,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get userId
+     * Get userId.
      *
-     * @return integer
+     * @return int|null
      */
     public function getUserId()
     {
@@ -88,9 +88,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Set clientId
+     * Set clientId.
      *
-     * @param integer $clientId
+     * @param int $clientId
      *
      * @return OauthAccessTokens
      */
@@ -102,9 +102,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get clientId
+     * Get clientId.
      *
-     * @return integer
+     * @return int
      */
     public function getClientId()
     {
@@ -112,13 +112,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set name
+     * Set name.
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return OauthAccessTokens
      */
-    public function setName($name)
+    public function setName($name = null)
     {
         $this->name = $name;
 
@@ -126,9 +126,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string
+     * @return string|null
      */
     public function getName()
     {
@@ -136,13 +136,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set scopes
+     * Set scopes.
      *
-     * @param string $scopes
+     * @param string|null $scopes
      *
      * @return OauthAccessTokens
      */
-    public function setScopes($scopes)
+    public function setScopes($scopes = null)
     {
         $this->scopes = $scopes;
 
@@ -150,9 +150,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get scopes
+     * Get scopes.
      *
-     * @return string
+     * @return string|null
      */
     public function getScopes()
     {
@@ -160,9 +160,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Set revoked
+     * Set revoked.
      *
-     * @param boolean $revoked
+     * @param bool $revoked
      *
      * @return OauthAccessTokens
      */
@@ -174,9 +174,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get revoked
+     * Get revoked.
      *
-     * @return boolean
+     * @return bool
      */
     public function getRevoked()
     {
@@ -184,13 +184,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
-     * @param \DateTime $createdAt
+     * @param \DateTime|null $createdAt
      *
      * @return OauthAccessTokens
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = null)
     {
         $this->createdAt = $createdAt;
 
@@ -198,9 +198,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -208,13 +208,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
-     * @param \DateTime $updatedAt
+     * @param \DateTime|null $updatedAt
      *
      * @return OauthAccessTokens
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
 
@@ -222,9 +222,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
@@ -232,13 +232,13 @@ class OauthAccessTokens
     }
 
     /**
-     * Set expiresAt
+     * Set expiresAt.
      *
-     * @param \DateTime $expiresAt
+     * @param \DateTime|null $expiresAt
      *
      * @return OauthAccessTokens
      */
-    public function setExpiresAt($expiresAt)
+    public function setExpiresAt($expiresAt = null)
     {
         $this->expiresAt = $expiresAt;
 
@@ -246,9 +246,9 @@ class OauthAccessTokens
     }
 
     /**
-     * Get expiresAt
+     * Get expiresAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getExpiresAt()
     {

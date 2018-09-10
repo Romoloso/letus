@@ -8,12 +8,12 @@ namespace Entity;
 class OauthClients
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
 
     /**
-     * @var integer
+     * @var int|null
      */
     private $userId;
 
@@ -33,35 +33,35 @@ class OauthClients
     private $redirect;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $personalAccessClient;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $passwordClient;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $revoked;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $updatedAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -69,13 +69,13 @@ class OauthClients
     }
 
     /**
-     * Set userId
+     * Set userId.
      *
-     * @param integer $userId
+     * @param int|null $userId
      *
      * @return OauthClients
      */
-    public function setUserId($userId)
+    public function setUserId($userId = null)
     {
         $this->userId = $userId;
 
@@ -83,9 +83,9 @@ class OauthClients
     }
 
     /**
-     * Get userId
+     * Get userId.
      *
-     * @return integer
+     * @return int|null
      */
     public function getUserId()
     {
@@ -93,7 +93,7 @@ class OauthClients
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -107,7 +107,7 @@ class OauthClients
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class OauthClients
     }
 
     /**
-     * Set secret
+     * Set secret.
      *
      * @param string $secret
      *
@@ -131,7 +131,7 @@ class OauthClients
     }
 
     /**
-     * Get secret
+     * Get secret.
      *
      * @return string
      */
@@ -141,7 +141,7 @@ class OauthClients
     }
 
     /**
-     * Set redirect
+     * Set redirect.
      *
      * @param string $redirect
      *
@@ -155,7 +155,7 @@ class OauthClients
     }
 
     /**
-     * Get redirect
+     * Get redirect.
      *
      * @return string
      */
@@ -165,9 +165,9 @@ class OauthClients
     }
 
     /**
-     * Set personalAccessClient
+     * Set personalAccessClient.
      *
-     * @param boolean $personalAccessClient
+     * @param bool $personalAccessClient
      *
      * @return OauthClients
      */
@@ -179,9 +179,9 @@ class OauthClients
     }
 
     /**
-     * Get personalAccessClient
+     * Get personalAccessClient.
      *
-     * @return boolean
+     * @return bool
      */
     public function getPersonalAccessClient()
     {
@@ -189,9 +189,9 @@ class OauthClients
     }
 
     /**
-     * Set passwordClient
+     * Set passwordClient.
      *
-     * @param boolean $passwordClient
+     * @param bool $passwordClient
      *
      * @return OauthClients
      */
@@ -203,9 +203,9 @@ class OauthClients
     }
 
     /**
-     * Get passwordClient
+     * Get passwordClient.
      *
-     * @return boolean
+     * @return bool
      */
     public function getPasswordClient()
     {
@@ -213,9 +213,9 @@ class OauthClients
     }
 
     /**
-     * Set revoked
+     * Set revoked.
      *
-     * @param boolean $revoked
+     * @param bool $revoked
      *
      * @return OauthClients
      */
@@ -227,9 +227,9 @@ class OauthClients
     }
 
     /**
-     * Get revoked
+     * Get revoked.
      *
-     * @return boolean
+     * @return bool
      */
     public function getRevoked()
     {
@@ -237,13 +237,13 @@ class OauthClients
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
-     * @param \DateTime $createdAt
+     * @param \DateTime|null $createdAt
      *
      * @return OauthClients
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = null)
     {
         $this->createdAt = $createdAt;
 
@@ -251,9 +251,9 @@ class OauthClients
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -261,13 +261,13 @@ class OauthClients
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
-     * @param \DateTime $updatedAt
+     * @param \DateTime|null $updatedAt
      *
      * @return OauthClients
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
 
@@ -275,9 +275,9 @@ class OauthClients
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {

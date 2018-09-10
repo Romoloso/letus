@@ -8,7 +8,7 @@ namespace Entity;
 class Migrations
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
 
@@ -18,15 +18,15 @@ class Migrations
     private $migration;
 
     /**
-     * @var integer
+     * @var int
      */
     private $batch;
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -34,7 +34,7 @@ class Migrations
     }
 
     /**
-     * Set migration
+     * Set migration.
      *
      * @param string $migration
      *
@@ -48,7 +48,7 @@ class Migrations
     }
 
     /**
-     * Get migration
+     * Get migration.
      *
      * @return string
      */
@@ -58,9 +58,9 @@ class Migrations
     }
 
     /**
-     * Set batch
+     * Set batch.
      *
-     * @param integer $batch
+     * @param int $batch
      *
      * @return Migrations
      */
@@ -72,13 +72,12 @@ class Migrations
     }
 
     /**
-     * Get batch
+     * Get batch.
      *
-     * @return integer
+     * @return int
      */
     public function getBatch()
     {
         return $this->batch;
     }
 }
-

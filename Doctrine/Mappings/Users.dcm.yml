@@ -48,9 +48,4 @@ Users:
             type: datetime
             nullable: true
             column: updated_at
-        she:
-            type: integer
-            nullable: false
-            options:
-                unsigned: false
     lifecycleCallbacks: {  }

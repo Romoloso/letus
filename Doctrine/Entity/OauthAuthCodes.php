@@ -13,33 +13,33 @@ class OauthAuthCodes
     private $id;
 
     /**
-     * @var integer
+     * @var int
      */
     private $userId;
 
     /**
-     * @var integer
+     * @var int
      */
     private $clientId;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $scopes;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $revoked;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $expiresAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
      * @return string
      */
@@ -49,9 +49,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Set userId
+     * Set userId.
      *
-     * @param integer $userId
+     * @param int $userId
      *
      * @return OauthAuthCodes
      */
@@ -63,9 +63,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Get userId
+     * Get userId.
      *
-     * @return integer
+     * @return int
      */
     public function getUserId()
     {
@@ -73,9 +73,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Set clientId
+     * Set clientId.
      *
-     * @param integer $clientId
+     * @param int $clientId
      *
      * @return OauthAuthCodes
      */
@@ -87,9 +87,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Get clientId
+     * Get clientId.
      *
-     * @return integer
+     * @return int
      */
     public function getClientId()
     {
@@ -97,13 +97,13 @@ class OauthAuthCodes
     }
 
     /**
-     * Set scopes
+     * Set scopes.
      *
-     * @param string $scopes
+     * @param string|null $scopes
      *
      * @return OauthAuthCodes
      */
-    public function setScopes($scopes)
+    public function setScopes($scopes = null)
     {
         $this->scopes = $scopes;
 
@@ -111,9 +111,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Get scopes
+     * Get scopes.
      *
-     * @return string
+     * @return string|null
      */
     public function getScopes()
     {
@@ -121,9 +121,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Set revoked
+     * Set revoked.
      *
-     * @param boolean $revoked
+     * @param bool $revoked
      *
      * @return OauthAuthCodes
      */
@@ -135,9 +135,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Get revoked
+     * Get revoked.
      *
-     * @return boolean
+     * @return bool
      */
     public function getRevoked()
     {
@@ -145,13 +145,13 @@ class OauthAuthCodes
     }
 
     /**
-     * Set expiresAt
+     * Set expiresAt.
      *
-     * @param \DateTime $expiresAt
+     * @param \DateTime|null $expiresAt
      *
      * @return OauthAuthCodes
      */
-    public function setExpiresAt($expiresAt)
+    public function setExpiresAt($expiresAt = null)
     {
         $this->expiresAt = $expiresAt;
 
@@ -159,9 +159,9 @@ class OauthAuthCodes
     }
 
     /**
-     * Get expiresAt
+     * Get expiresAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getExpiresAt()
     {

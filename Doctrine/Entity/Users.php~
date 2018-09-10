@@ -8,7 +8,7 @@ namespace Entity;
 class Users
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
 
@@ -28,25 +28,25 @@ class Users
     private $password;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $rememberToken;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      */
     private $updatedAt;
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -54,7 +54,7 @@ class Users
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -68,7 +68,7 @@ class Users
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -78,7 +78,7 @@ class Users
     }
 
     /**
-     * Set email
+     * Set email.
      *
      * @param string $email
      *
@@ -92,7 +92,7 @@ class Users
     }
 
     /**
-     * Get email
+     * Get email.
      *
      * @return string
      */
@@ -102,7 +102,7 @@ class Users
     }
 
     /**
-     * Set password
+     * Set password.
      *
      * @param string $password
      *
@@ -116,7 +116,7 @@ class Users
     }
 
     /**
-     * Get password
+     * Get password.
      *
      * @return string
      */
@@ -126,13 +126,13 @@ class Users
     }
 
     /**
-     * Set rememberToken
+     * Set rememberToken.
      *
-     * @param string $rememberToken
+     * @param string|null $rememberToken
      *
      * @return Users
      */
-    public function setRememberToken($rememberToken)
+    public function setRememberToken($rememberToken = null)
     {
         $this->rememberToken = $rememberToken;
 
@@ -140,9 +140,9 @@ class Users
     }
 
     /**
-     * Get rememberToken
+     * Get rememberToken.
      *
-     * @return string
+     * @return string|null
      */
     public function getRememberToken()
     {
@@ -150,13 +150,13 @@ class Users
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
-     * @param \DateTime $createdAt
+     * @param \DateTime|null $createdAt
      *
      * @return Users
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = null)
     {
         $this->createdAt = $createdAt;
 
@@ -164,9 +164,9 @@ class Users
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -174,13 +174,13 @@ class Users
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
-     * @param \DateTime $updatedAt
+     * @param \DateTime|null $updatedAt
      *
      * @return Users
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
 
@@ -188,13 +188,12 @@ class Users
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
 }
-
