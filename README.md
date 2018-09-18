@@ -8,10 +8,11 @@
 </p>
 
 ## Functions
-- Laravel 5.4 passport
+- [Laravel 5.4 passport](https://medium.com/modulr/create-api-authentication-with-passport-of-laravel-5-6-1dc2d400a7f)
 - Login and login attempts.
 - Login Testing.
 - Doctrine mapping and entities.
+- [Test adding user](https://medium.com/@jsdecena/simple-tdd-in-laravel-with-11-steps-c475f8b1b214).
 
 ## 命令行工具
 

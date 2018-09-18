@@ -9,7 +9,7 @@
 
 // 如果是生产环境
 // if (app()->environment() == 'prod') return;
-
+return;
 use App\Services\Doctrine;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 
