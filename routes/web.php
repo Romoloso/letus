@@ -14,6 +14,7 @@
 use Entity\Migrations;
 
 Route::get('/', function () {
+
     return view('welcome');
 });
 
@@ -21,6 +22,6 @@ Auth::routes();
 Route::resource('users', 'UserController');
 
 Route::group(['middle' => ['web', 'auth']], function () {
-    Route::get('/users', 'UserController@index')->name('users');
+
 });
 

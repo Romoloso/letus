@@ -13,6 +13,7 @@
 - Login Testing.
 - Doctrine mapping and entities.
 - [Test adding user](https://medium.com/@jsdecena/simple-tdd-in-laravel-with-11-steps-c475f8b1b214).
+- Test register and login
 
 ## 命令行工具
 
@@ -32,3 +33,20 @@ vendor\bin\doctrine orm:schema-tool:update --dump-sql
 # 执行更新
 vendor\bin\doctrine orm:schema-tool:update --force
 ```
+### Testing
+- 添加自定义内容到`header`  
+    - 第一种方式：
+    ```
+    $this->call('POST', route('users.store'), $data, [], [],['X-CSRF_TOKEN'=>csrf_token()])
+    ```
+    - 第二种方式：
+    ```
+    $data = [
+                'name' => $this->faker->name,
+                'email' => $this->faker->unique()->email,
+                'password' => bcrypt(123456),
+                '_token' => csrf_token()    // 需要执行 call 方法后才能有值
+            ];
+    $this->call('POST', route('users.store'), $data)->assertStatus(201)
+    ```
+- 测试`API`注册登录
