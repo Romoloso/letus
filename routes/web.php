@@ -15,13 +15,20 @@ use Entity\Migrations;
 
 Route::get('/', function () {
 
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 Route::resource('users', 'UserController');
 
-Route::group(['middle' => ['web', 'auth']], function () {
+Route::group(['middleware' => ['web', 'auth']], function () {
 
 });
 
+Route::get('test-broadcast', function(){
+    broadcast(new \App\Events\ExampleEvent);
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

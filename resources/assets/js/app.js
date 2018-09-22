@@ -20,3 +20,17 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+import Echo from 'laravel-echo'
+
+window.io = require('socket.io-client');
+
+window.Echo = new Echo({
+    broadcaster: 'socket.io',
+    host: window.location.hostname + ':6001'
+});
+//这里放要监控的频道名，以及要进行的操作
+window.Echo.channel('test-event')
+    .listen('ExampleEvent', (e) => {
+        console.log(e);
+    });
