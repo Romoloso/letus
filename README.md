@@ -15,6 +15,7 @@
 - [Test adding user](https://medium.com/@jsdecena/simple-tdd-in-laravel-with-11-steps-c475f8b1b214).
 - Test register and login
 - [Broadcast](https://medium.com/@dennissmink/laravel-echo-server-how-to-24d5778ece8b)
+- Binary upload by using multipart/form-data
 
 ## 命令行工具
 

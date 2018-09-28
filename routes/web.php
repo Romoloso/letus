@@ -32,3 +32,6 @@ Route::get('test-broadcast', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('files', 'FileController');
+Route::post('files/test', 'FileController@test')->name('files.test');
